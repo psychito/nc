@@ -25,28 +25,20 @@ $this->addStyleDeclaration("h1, h2, h3, h4, h5, h6, .site-title {	font-family: L
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<jdoc:include type="head" />
 </head>
-<body>
+<body  data-spy="scroll" data-target=".navbar" data-offset="50">
 
 <div class="completo">
 	<div class="anchototal container-fluid">
 	<header>
 		<div class="row-fluid topper padders">
-			<div class="span3 logo">
-				<a class="brand pull-right" href="<?php echo $this->baseurl; ?>/">
+			<div class="span1 logo">
+				<a class="brand pull-left" href="<?php echo $this->baseurl; ?>/">
 				   <img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/images/logo.png" alt="NC"/>
 			  </a>
 			</div>
-			<div class="span9 menu">
+			<div class="span11 menu">
 				<nav class="navigation" role="navigation">
-					<div class="navbar pull-left">
-						<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-							<span class="element-invisible"><?php echo JTEXT::_('TPL_NC_TOGGLE_MENU'); ?></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</a>
-					</div>
-					<div class="nav-collapse">
+					<div class="">
 						<jdoc:include type="modules" name="nc-menu" style="none" />
 					</div>
 				</nav>
@@ -55,7 +47,7 @@ $this->addStyleDeclaration("h1, h2, h3, h4, h5, h6, .site-title {	font-family: L
 	</header>
 		<?php $menu = $app->getMenu();
 			if ($menu->getActive() == $menu->getDefault($lang->getTag())) {?>
-				<section class="frontcont padders">
+				<section class="frontcont">
 					<div class="row-fluid photoslider">
 						<div class="span12 phslider">
 							<jdoc:include type="modules" name="nc-photoslider" style="none" />

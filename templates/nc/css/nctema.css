@@ -1,13 +1,81 @@
 .logo img {
-	max-width: 150px;
+	max-width: 100px;
+	width:100%;
+}
+.contenido{
+	text-align: justify;
 }
 .topper{
 	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	height:60px;
 }
 .padders{
 	padding-right: 50px;
 	padding-left: 50px;
 	width: calc(100% - 100px) !important;
+}
+.menu a{
+	color:white;
+}
+
+.frpost {
+    min-height: calc(100vh - 60px) !important;
+		padding-top:60px;
+}
+.frpost .tit{
+	color: white;
+	left: 0px;
+	margin-bottom:20px;
+	padding-right: 50px;
+	padding-left: 50px;
+	width: calc(100% - 100px) !important;
+}
+.frpost
+.tit1{
+	background-color: blue;
+}
+.nav li:nth-child(1) a:after{
+	width:100%;
+	content:"\A iniotro";
+	white-space: pre;
+}
+.nav li:nth-child(2) a:after{
+	width:100%;
+	content:"\A tit1otro";
+	white-space: pre;
+}
+.nav li:nth-child(3) a:after{
+	width:100%;
+	content:"\A tit2otro";
+	white-space: pre;
+}
+.nav li:nth-child(4) a:after{
+	width:100%;
+	content:"\A tit3otro";
+	white-space: pre;
+}
+.nav li:nth-child(5) a:after{
+	width:100%;
+	content:"\A tit4otro";
+	white-space: pre;
+}
+.nav li:nth-child(6) a:after{
+	width:100%;
+	content:"\A tit5otro";
+	white-space: pre;
+}
+.tit2{
+background-color: blue;
+}
+.tit3{
+background-color: blue;
+}
+.tit4{
+background-color: blue;
+}
+.tit5{
+background-color: blue;
 }
 article,
 aside,
@@ -692,7 +760,6 @@ h4 small {
 ul,
 ol {
 	padding: 0;
-	margin: 0 0 9px 25px;
 }
 ul ul,
 ul ol,
@@ -2923,6 +2990,8 @@ input[type="submit"].btn.btn-mini {
 	margin-left: 0;
 	margin-bottom: 18px;
 	list-style: none;
+	justify-content: space-evenly;
+	display: flex;
 }
 .nav > li > a {
 	display: block;
@@ -7191,8 +7260,6 @@ body.site.fluid {
 }
 .navigation {
 	padding: 5px 0;
-	border-top: 1px solid rgba(0,0,0,0.075);
-	border-bottom: 1px solid rgba(0,0,0,0.075);
 	margin-bottom: 10px;
 }
 .navigation .nav-pills {
@@ -7404,6 +7471,7 @@ figcaption {
 }
 .navigation .nav li {
 	position: relative;
+	text-align:center;
 }
 .navigation .nav > li:hover > .nav-child,
 .navigation .nav > li > a:focus + .nav-child,
