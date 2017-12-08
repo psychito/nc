@@ -9,6 +9,7 @@ $sitename = $app->get('sitename');
 $this->setHtml5(true);
 JHtml::_('bootstrap.framework');
 JHtml::_('jquery.framework');
+JHtml::_('script', 'jquery.easing.1.3.js', array('version' => 'auto', 'relative' => true));
 JHtml::_('script', 'template.js', array('version' => 'auto', 'relative' => true));
 JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true, 'conditional' => 'lt IE 9'));
 JHtml::_('stylesheet', 'nctema.css', array('version' => 'auto', 'relative' => true));
