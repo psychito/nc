@@ -26,7 +26,7 @@ $this->addStyleDeclaration("h1, h2, h3, h4, h5, h6, .site-title {	font-family: L
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<jdoc:include type="head" />
 </head>
-<body  data-spy="scroll" data-target=".navbar" data-offset="50">
+<body  data-spy="scroll" data-target=".navigation" data-offset="50">
 
 <div class="completo">
 	<div class="anchototal container-fluid">
