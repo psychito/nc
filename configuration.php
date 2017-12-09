@@ -56,8 +56,8 @@ class JConfig {
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	public $log_path = 'C:\\wamp64\\www\\nc\\administrator/logs';
-	public $tmp_path = 'C:\\wamp64\\www\\nc/tmp';
+	public $log_path = 'administrator/logs';
+	public $tmp_path = 'nc/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 	public $shared_session = '0';

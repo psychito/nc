@@ -1,6 +1,15 @@
 .logo img {
 	max-width: 100px;
 	width:100%;
+	max-height: 60px;
+}
+.contenido img{
+	padding: 0 20px 0 0;
+}
+.logo{
+	height: 100%;
+display: flex;
+align-items: center;
 }
 .contenido{
 	text-align: justify;
@@ -8,7 +17,7 @@
 .topper{
 	background-color: rgba(0,0,0,0.5);
 	position: fixed;
-	height:60px;
+	height:70px;
 }
 .padders{
 	padding-right: 50px;
@@ -17,11 +26,14 @@
 }
 .menu a{
 	color:white;
+	font-family: Oswald, sans-serif;
+	font-size: 13px;
+	text-transform: uppercase;
 }
 
 .frpost {
-    min-height: calc(100vh - 60px) !important;
-		padding-top:60px;
+    min-height: calc(100vh - 70px) !important;
+		padding-top:70px;
 }
 .frpost .tit{
 	color: white;
@@ -30,52 +42,67 @@
 	padding-right: 50px;
 	padding-left: 50px;
 	width: calc(100% - 100px) !important;
-}
-.frpost
-.tit1{
-	background-color: blue;
+	
 }
 .nav li:nth-child(1) a:after{
-	width:100%;
-	content:"\A iniotro";
-	white-space: pre;
+	content:"\AHome";
 }
 .nav li:nth-child(2) a:after{
-	width:100%;
-	content:"\A tit1otro";
-	white-space: pre;
+	content:"\A About Nancy";
 }
 .nav li:nth-child(3) a:after{
-	width:100%;
-	content:"\A tit2otro";
-	white-space: pre;
+	content:"\A Children's literature";
 }
 .nav li:nth-child(4) a:after{
-	width:100%;
-	content:"\A tit3otro";
-	white-space: pre;
+	content:"\A Educational consulting";
 }
 .nav li:nth-child(5) a:after{
-	width:100%;
-	content:"\A tit4otro";
-	white-space: pre;
+	content:"\A Educational technologies";
 }
 .nav li:nth-child(6) a:after{
+	content:"\A Contact me";
+}
+.nav li a:after{
 	width:100%;
-	content:"\A tit5otro";
 	white-space: pre;
+	font-family: Oswald, sans-serif;
+	font-size: 11px;
+	text-transform: none;	
+}
+
+.titulo{
+	padding-top:8px;
+}
+.tit1{
+background-color: #FABA42;
+height: 60px;
+font-family: Oswald, sans-serif;
+color:#3B3F42 !important;
 }
 .tit2{
-background-color: blue;
+background-color: #57B9D0;
+height: 60px;
+font-family: Oswald, sans-serif;
+font-size: 17px;
 }
 .tit3{
-background-color: blue;
+background-color: #D96C2E;
+height: 60px;
+font-family: Oswald, sans-serif;
+font-size: 17px;
 }
 .tit4{
-background-color: blue;
+background-color: #7C9D59;
+height: 60px;
+font-family: Oswald, sans-serif;
+font-size: 17px;
 }
 .tit5{
-background-color: blue;
+background-color: #FABA42;
+height: 60px;
+font-family: Oswald, sans-serif;
+font-size: 17px;
+color:#3B3F42 !important;
 }
 article,
 aside,
@@ -2987,11 +3014,12 @@ input[type="submit"].btn.btn-mini {
 	margin-top: 5px;
 }
 .nav {
-	margin-left: 0;
-	margin-bottom: 18px;
+	margin: 0;
 	list-style: none;
 	justify-content: space-evenly;
 	display: flex;
+	align-items: center;
+	height: 70px;
 }
 .nav > li > a {
 	display: block;

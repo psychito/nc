@@ -19,7 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `ncjoom`
 --
-DROP DATABASE `ncjoom`;
 CREATE DATABASE IF NOT EXISTS `ncjoom` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `ncjoom`;
 

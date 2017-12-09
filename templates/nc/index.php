@@ -13,8 +13,8 @@ JHtml::_('script', 'jquery.easing.1.3.js', array('version' => 'auto', 'relative'
 JHtml::_('script', 'template.js', array('version' => 'auto', 'relative' => true));
 JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true, 'conditional' => 'lt IE 9'));
 JHtml::_('stylesheet', 'nctema.css', array('version' => 'auto', 'relative' => true));
-JHtml::_('stylesheet', '//fonts.googleapis.com/css?family=Lato:300,400,900|Roboto+Condensed:400,700');
-$this->addStyleDeclaration("h1, h2, h3, h4, h5, h6, .site-title {	font-family: Lato, sans-serif;
+JHtml::_('stylesheet', '//fonts.googleapis.com/css?family=Lato:300,400,900|Oswald:400,700');
+$this->addStyleDeclaration("h1, h2, h3, h4, h5, h6, .site-title {	font-family: Oswald, sans-serif;
 }");
 ?>
 
@@ -32,12 +32,12 @@ $this->addStyleDeclaration("h1, h2, h3, h4, h5, h6, .site-title {	font-family: L
 	<div class="anchototal container-fluid">
 	<header>
 		<div class="row-fluid topper padders">
-			<div class="span1 logo">
-				<a class="brand pull-left" href="<?php echo $this->baseurl; ?>/">
+			<div class="span2 logo">
+				<a class="logo brand pull-left" href="<?php echo $this->baseurl; ?>/">
 				   <img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/images/logo.png" alt="NC"/>
 			  </a>
 			</div>
-			<div class="span11 menu">
+			<div class="span10 menu">
 				<nav class="navigation" role="navigation">
 					<div class="">
 						<jdoc:include type="modules" name="nc-menu" style="none" />
