@@ -32,14 +32,22 @@ $this->addStyleDeclaration("h1, h2, h3, h4, h5, h6, .site-title {	font-family: O
 	<div class="anchototal container-fluid">
 	<header>
 		<div class="row-fluid topper padders">
-			<div class="span2 logo">
-				<a class="logo brand pull-left" href="<?php echo $this->baseurl; ?>/">
+			<div class="logo">
+				<a class="logo" href="<?php echo $this->baseurl; ?>/">
 				   <img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/images/logo.png" alt="NC"/>
 			  </a>
 			</div>
-			<div class="span10 menu">
+			<div class="menu">
 				<nav class="navigation" role="navigation">
-					<div class="">
+					<div class="navbar pull-right">
+						<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+							<span class="element-invisible"><?php echo JTEXT::_('TPL_LUCKYSEVEN_TOGGLE_MENU'); ?></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</a>
+					</div>
+					<div class="nav-collapse">
 						<jdoc:include type="modules" name="nc-menu" style="none" />
 					</div>
 				</nav>

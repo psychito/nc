@@ -4,7 +4,7 @@ class JConfig {
 	public $offline_message = 'Este sitio está cerrado por tareas de mantenimiento.<br />Por favor, inténtelo nuevamente más tarde.';
 	public $display_offline_message = '1';
 	public $offline_image = '';
-	public $sitename = 'NC';
+	public $sitename = 'Nancy Crespo';
 	public $editor = 'tinymce';
 	public $captcha = '0';
 	public $list_limit = '20';

@@ -1,3 +1,67 @@
+
+.secondcont{
+	padding-top: 90px;
+}
+
+.readmore a{
+
+	background-color: #405766;
+	color: white;
+	text-align: right;
+	float: right;
+	padding: 10px 15px;
+	font-size: 16px;
+
+}
+.readmore a:hover{
+	color:white;
+	text-decoration:none;
+}
+.phslider .bt-introtext {
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	position: absolute;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: justify;
+	padding: 30px 50px;
+}
+.phslider .bt-cs .bt-row {
+	padding: 0 !important;
+}
+.phslider .bt-cs .bt-inner .bt-title {
+	clear: both;
+	color: white !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 150%;
+	padding: 0 50px;
+	font-size: 29px;
+	text-shadow: 2px 2px 1px #000000;
+}
+.phslider .bt-edit{
+	position: absolute;
+	top: 40%;
+	width: 100%;
+
+}
+.phslider .bt_handles {
+	top: 80px !important;
+	right: 5px !important;
+	position: absolute !important;
+}
+.phslider .bt-cs .bt-inner img {
+	outline: 0 !important;
+	border: 0 !important;
+	max-width: 100% !important;
+	margin: -20px 0 0 !important;
+	width: 100% !important;
+}
+.phslider .bt-cs .bt-inner {
+	margin: 0;
+	position: relative;
+	padding: 0 !important;
+}
 .logo img {
 	max-width: 100px;
 	width:100%;
@@ -8,8 +72,9 @@
 }
 .logo{
 	height: 100%;
-display: flex;
-align-items: center;
+	margin: 5px 0;
+	width:100px;
+	float:left;
 }
 .contenido{
 	text-align: justify;
@@ -17,12 +82,18 @@ align-items: center;
 .topper{
 	background-color: rgba(0,0,0,0.5);
 	position: fixed;
-	height:70px;
+		z-index:1000;
 }
 .padders{
 	padding-right: 50px;
 	padding-left: 50px;
 	width: calc(100% - 100px) !important;
+}
+.menu{
+	width: calc(100% - 100px);
+	float: right;
+	min-width:200px;
+
 }
 .menu a{
 	color:white;
@@ -32,8 +103,8 @@ align-items: center;
 }
 
 .frpost {
-    min-height: calc(100vh - 70px) !important;
-		padding-top:70px;
+    min-height: calc(100vh - 80px) !important;
+		padding-top:80px;
 }
 .frpost .tit{
 	color: white;
@@ -69,7 +140,24 @@ align-items: center;
 	font-size: 11px;
 	text-transform: none;	
 }
+.quslider{
+	background-color: #53545F;
+	color:white;
+}
+.quslider .bt-title{
+	display:none;
+}
+.quslider .bt-desc{
 
+	padding: 30px 50px;
+
+}
+.quslider .quien{
+	text-align: right;
+}
+.quslider blockquote{
+	font-size: 19px;
+}
 .titulo{
 	padding-top:8px;
 }
@@ -3020,6 +3108,7 @@ input[type="submit"].btn.btn-mini {
 	display: flex;
 	align-items: center;
 	height: 70px;
+	width:100%;
 }
 .nav > li > a {
 	display: block;
@@ -3363,9 +3452,10 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar {
 	overflow: visible;
-	margin-bottom: 18px;
+	margin-bottom: 15px;
 	*position: relative;
 	*z-index: 2;
+	margin-top:15px;
 }
 .navbar-inner {
 	min-height: 40px;
@@ -4919,11 +5009,8 @@ a.badge:focus {
 		display: none !important;
 	}
 }
-@media (max-width: 767px) {
-	body {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+@media (max-width: 500px) {
+
 	.navbar-fixed-top,
 	.navbar-fixed-bottom,
 	.navbar-static-top {
@@ -5737,7 +5824,19 @@ a.badge:focus {
 		margin-left: 0;
 	}
 }
-@media (max-width: 979px) {
+@media (max-width: 800px) {
+.bt-cs .bt-inner .bt-title{
+		font-size:19px;
+	}
+	.bt-desc{
+		display:none;
+	}
+	.nav {
+	margin: 10px 0;
+	list-style: none;
+	display: block;
+	height: auto;
+}
 	body {
 		padding-top: 0;
 	}
@@ -5775,7 +5874,7 @@ a.badge:focus {
 		float: none;
 	}
 	.nav-collapse .nav > li > a {
-		margin-bottom: 2px;
+		margin-bottom: 10px;
 	}
 	.nav-collapse .nav > .divider-vertical {
 		display: none;
@@ -5783,15 +5882,6 @@ a.badge:focus {
 	.nav-collapse .nav .nav-header {
 		color: #555;
 		text-shadow: none;
-	}
-	.nav-collapse .nav > li > a,
-	.nav-collapse .dropdown-menu a {
-		padding: 9px 15px;
-		font-weight: bold;
-		color: #555;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		border-radius: 3px;
 	}
 	.nav-collapse .btn {
 		padding: 4px 10px 4px;
@@ -7286,10 +7376,7 @@ body.site.fluid {
 .header .finder .btn {
 	margin-top: 0px;
 }
-.navigation {
-	padding: 5px 0;
-	margin-bottom: 10px;
-}
+
 .navigation .nav-pills {
 	margin-bottom: 0;
 }
