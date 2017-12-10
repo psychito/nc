@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension>
+<extension type="package" version="2.5" method="upgrade">
+	<name>Centrora Security Package</name>
+	<packagename>centrora</packagename>
+	<version>7.1.1</version>
+	<versionname>Centrora</versionname>
+	<creationDate>2014-07-24</creationDate>
+	<author>Centrora Security Team</author>
+	<author>Open Source Excellence</author>
+	<authorEmail>info@centrora.com</authorEmail>
+	<authorEmail>info@opensource-excellence.com</authorEmail>
+	<authorUrl>http://www.centrora.com</authorUrl>
+	<authorUrl>http://www.opensource-excellence.com</authorUrl>
+	<copyright>(C) 2013 - 2017 Centrora Security. All rights reserved.</copyright>
+	<copyright>(C) 2008 - 2014 Open Source Excellence. All rights reserved.</copyright>
+	<license>GNU/GPLv3 or later</license>
+	<description>Centrora Security Package.</description>
+	<files folder="packages">
+		<filename type="plugin"    group="system"     id="centrora"      >plg_system_centrora.zip</filename>
+		<filename type="component"                    id="com_ose_firewall"  >com_centrora.zip</filename>
+	</files>
+	<updateservers>
+		<server type="collection" priority="1" name="Centrora Security Update Site">https://raw.githubusercontent.com/Centrora/centrora-joomla-xml/master/list.xml</server>
+	</updateservers>
+	<restorepoint>
+		<customdirs>
+			<dir>administrator/manifests/packages/centrora</dir>
+			<dir>administrator/components/com_ose_firewall</dir>
+			<dir>plugins/system/centrora</dir>
+		</customdirs>
+		<customfiles>
+			<file>administrator/manifests/packages/pkg_centrora.xml</file>
+		</customfiles>
+		<langfiles>
+		</langfiles>
+		<extraprefixes>
+			<prefix>centrora</prefix>
+		</extraprefixes>
+	</restorepoint>
+</extension>

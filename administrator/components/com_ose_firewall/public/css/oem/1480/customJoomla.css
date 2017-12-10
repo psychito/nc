@@ -1,0 +1,103 @@
+.logo img{
+    width: 300px !important;
+    padding-left: 15px;
+}
+.vendorname {
+    display: none;
+}
+
+#versions {
+    margin-top: 38px;
+}
+
+.centrora-news {
+    margin-top: 23px;
+}
+
+#progressingbar {
+    padding-right: 0;
+}
+
+.wrapbody {
+    background-image: url("imgs/background.jpg");
+}
+
+.everythingOnOneLine {
+    background-image: url("imgs/background.jpg");
+}
+
+#div_dashboard {
+    top: 20px;
+}
+
+#mfiles-results {
+    color: #fff;
+}
+
+#scan-result-panel {
+    color: #fff;
+}
+
+#scan-result-panel .nav-tabs{
+    display: none;
+}
+
+.vl-short-desc {
+    background-color: #fcdfdb;
+    border-color: #fac9c4;
+    color: #e02612;
+}
+
+#dashboard .oem-footer{
+    padding-left: 0 !important;
+}
+
+#dashboard .oem-footer-box{
+    padding-right: 0 !important;
+}
+
+#vsscan-page .oem-footer{
+    margin-top: 0 !important;
+}
+
+#dashboard{
+    margin-left: 0 !important;
+}
+
+#dashboard .footer-innerbox{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+#dashboard .footer-box{
+    padding-left: 0 !important;
+}
+
+.navbar .nav > li > a {
+    padding: 13px 10px !important;
+    text-shadow: none !important;
+    color: #fff !important;
+}
+
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover{
+    text-shadow: none !important;
+    color: #fff !important;
+    background-color: rgba(83, 94, 100, 0.701961) !important;
+}
+
+.back-to-jm {
+    margin-top: 23px;
+}
+
+#div_dashboard{
+    margin-top: 20px !important;
+}
+
+.row {
+    margin-left: 0 !important;
+}
+
+#status{
+    -webkit-box-shadow : none !important;
+    box-shadow : none !important;
+}

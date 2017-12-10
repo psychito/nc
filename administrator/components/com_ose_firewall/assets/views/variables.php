@@ -1,0 +1,134 @@
+<?php
+oseFirewall::checkDBReady ();
+$this->model->getNounce ();
+$firewallstat= new oseFirewallStat();
+?>
+<div id="oseappcontainer">
+	<div class="container">
+	<?php
+	$this->model->showLogo ();
+	$this->model->showHeader ();
+	?>
+	<!-- Add Variable Form Modal -->
+                <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel2"><?php oLang::_('ADD_A_VARIABLE'); ?></h4>
+                            </div>
+                            <div class="modal-body">
+                              <form id = 'add-variable-form' class="form-horizontal group-border stripped" role="form" enctype="multipart/form-data" method="POST">                            
+                                   	<div class="form-group">
+                                           <label class="col-sm-4 control-label" for="textfield"><?php oLang::_('O_VARIABLE_TYPE');?></label>
+                                           <div class="col-sm-8">
+                                               <select class="form-control" id="requesttype" name ="requesttype">
+                                                    <option value="POST">POST</option>
+                                                    <option value="GET">GET</option>
+                                                    <option value="COOKIE">COOKIE</option>
+                                                </select>
+                                           </div>
+                                    </div>
+                                   	<div class="form-group">
+                                           <label class="col-sm-4 control-label" for="textfield"><?php oLang::_('O_VARIABLE_NAME');?></label>
+                                           <div class="col-sm-8">
+                                               <input type="text" placeholder="<?php oLang::_('O_VARIABLE_NAME');?>" id="variablefield" name="variablefield" class="form-control">
+                                           </div>
+                                    </div>
+                                    <div class="form-group">
+                                           <label class="col-sm-4 control-label" for="textfield"><?php oLang::_('O_STATUS');?></label>
+                                           <div class="col-sm-8">
+                                               <select class="form-control" id="statusfield" name ="statusfield">
+                                                    <option value="1">Active</option>
+                                                    <option value="2">Filtered</option>
+                                                    <option value="3">Whitelisted</option>
+                                               </select>
+                                           </div>
+                                    </div>
+                                   <input type="hidden" name="controller" value="variables"> 
+								    <input type="hidden" name="action" value="addvariables">
+								    <input type="hidden" name="task" value="addvariables">
+								    <input type="hidden" name="option" value="com_ose_firewall">
+								   	<div class="col-sm-offset-10">
+											<button type="submit" class="btn" id='save-button'><i class="glyphicon glyphicon-save"></i> <?php oLang::_('SAVE');?></button>
+									</div>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+	<!-- /.modal -->
+	<div class="content-inner">
+	<div class="row ">
+                        <div class="col-lg-12 sortable-layout">
+                            <!-- col-lg-12 start here -->
+                            <div class="panel panel-primary plain">
+                                <!-- Start .panel -->
+                                <div class="panel-heading white-bg"></div>
+                                <div class="panel-controls"></div>
+                                <div class="panel-controls-buttons">
+                                	<button data-target="#formModal" data-toggle="modal" class="btn btn-sm mr5 mb10"><i class="text-primary glyphicon glyphicon-plus-sign"></i> <?php oLang::_('ADD_A_VARIABLE'); ?></button>
+                                	<button class="btn btn-sm mr5 mb10" type="button" onClick="changeBatchItemStatus('scanvar')"><i class="text-block glyphicon glyphicon-minus-sign"></i> <?php oLang::_('SCAN_VARIABLE'); ?></button>
+                                	<button class="btn btn-sm mr5 mb10" type="button" onClick="changeBatchItemStatus('filtervar')"><i class="text-yellow glyphicon glyphicon-eye-open"></i> <?php oLang::_('FILTER_VARIABLE'); ?></button>
+                                	<button class="btn btn-sm mr5 mb10" type="button" onClick="changeBatchItemStatus('ignorevar')"><i class="text-success glyphicon glyphicon-ok-sign"></i> <?php oLang::_('IGNORE_VARIABLE'); ?></button>
+                                	<?php 
+                                		if (OSE_CMS=='joomla') {
+                                	?>
+                                	<button class="btn btn-sm mr5 mb10" type="button" onClick="loadData('loadJoomlarules')"><i class="text-primary glyphicon glyphicon-transfer"></i> <?php oLang::_('LOAD_JOOMLA_DATA'); ?></button>
+                                	<button class="btn btn-sm mr5 mb10" type="button" onClick="loadData('loadJSocialrules')"><i class="text-primary glyphicon glyphicon-transfer"></i> <?php oLang::_('LOAD_JSOCIAL_DATA'); ?></button>
+                                	<?php 
+                                		}
+                                		else
+                                	{
+                                	?>
+                                	<button class="btn btn-sm mr5 mb10" type="button" onClick="loadData('loadWordpressrules')"><i class="text-primary glyphicon glyphicon-transfer"></i> <?php oLang::_('LOAD_WORDPRESS_DATA'); ?></button>
+                                	<?php 
+                                		}
+                                	?>
+                                	<button class="btn btn-sm mr5 mb10 text-danger" type="button" onClick="removeItems()"><i class="glyphicon glyphicon-remove-sign"></i> <?php oLang::_('O_DELETE_ITEMS'); ?></button>
+                                	<button class="btn btn-sm mr5 mb10 text-danger" type="button" onClick="removeAllItems()"><i class="glyphicon glyphicon-erase"></i> <?php oLang::_('O_DELETE__ALLITEMS'); ?></button>
+                                	
+                                </div>
+                                <?php
+                                if(!$firewallstat->checkDefaultWhiteListVariables()) {
+                                    ?>
+                                        <div class="alert alert-danger">
+                                            <div class="false-alert-variables"><?php oLang::_('O_DEFAULT_VARIABLES_WARNING'); ?>
+                                         <button class="btn btn-sm mr5 mb10" type="button" onClick="defaultWhiteListVariables()" style="float: right;"><i class="text-success glyphicon glyphicon-ok-sign"></i> <?php oLang::_('O_DEFAULT_VARIABLE_BUTTON'); ?></button>
+                                        </div>
+                                            </div>
+                                     </div>
+                                    <?php
+                                }
+                                ?>
+                                <div class="panel-body">
+                                    <table class="table display" id="variablesTable">
+                                        <thead>
+                                            <tr>
+												<th><?php oLang::_('O_ID'); ?></th>
+												<th><?php oLang::_('O_VARIABLES'); ?></th>
+												<th><?php oLang::_('O_STATUS'); ?></th>
+												<th><?php oLang::_('O_STATUS_EXP'); ?></th>
+                                                <th><input type="checkbox" name="checkedAll" id="checkedAll"></th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+												<th><?php oLang::_('O_ID'); ?></th>
+												<th><?php oLang::_('O_VARIABLES'); ?></th>
+												<th><?php oLang::_('O_STATUS'); ?></th>
+												<th><?php oLang::_('O_STATUS_EXP'); ?></th>
+                                            	<th></th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- End .panel -->
+                        </div>
+	   </div>
+	   </div>
+	</div>
+</div>

@@ -26,7 +26,7 @@ $this->addStyleDeclaration("h1, h2, h3, h4, h5, h6, .site-title {	font-family: O
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<jdoc:include type="head" />
 </head>
-<body  data-spy="scroll" data-target=".navigation" data-offset="50">
+<body  id="top" data-spy="scroll" data-target=".navigation" data-offset="50">
 
 <div class="completo">
 	<div class="anchototal container-fluid">
@@ -84,10 +84,10 @@ $this->addStyleDeclaration("h1, h2, h3, h4, h5, h6, .site-title {	font-family: O
 			<?php } ?>
 			<footer>
 			<div class="row-fluid  footcont padders">
-				<div class="span5 foot1">
+				<div class="span2 foot1">
 					<jdoc:include type="modules" name="nc-foot1" style="none" />
 				</div>
-				<div class="span5 foot2">
+				<div class="span8 foot2">
 					<jdoc:include type="modules" name="nc-foot2" style="none" />
 				</div>
 				<div class="span2 foot3">

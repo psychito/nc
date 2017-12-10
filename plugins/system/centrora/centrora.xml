@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin"  group="system" method="upgrade">
+	<name>System - Centrora Security Activation Plugin</name>
+	<author>Centrora Security</author>
+	<author>Open Source Excellence</author>
+	<creationDate>25-Sep-2017</creationDate>
+	<copyright>Copyright (C) 2013-2017 Centrora Security. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2008-2017 Open Source Excellence. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authoremail>info@centrora.com</authoremail>
+    <authoremail>info@opensource-excellence.com</authoremail>
+    <authorurl>http://www.centrora.com</authorurl>
+    <authorurl>http://www.opensource-excellence.com</authorurl>
+	<version>7.1.1</version>
+	<description>The system plugin to activate Centrora Security</description>
+	<files>
+		<filename plugin="centrora">centrora.php</filename>
+	</files>
+		<config>
+	    <fields name="params">
+	    	<fieldset name="Basic">
+			</fieldset>
+		</fields>
+	</config>
+</extension>

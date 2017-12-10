@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.3" method="upgrade">
+	<name>OSE_FIREWALL</name>
+    <creationDate>05-May-2014</creationDate>
+    <description>An Open Source Firewall System.</description>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <author>Centrora</author>
+	<author>Open Source Excellence</author>
+	<creationDate>24-Sep-2013</creationDate>
+	<copyright>Copyright (C) 2013-2017 Centrora. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2008-2014 Open Source Excellence. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authoremail>info@centrora.com</authoremail>
+    <authoremail>info@opensource-excellence.com</authoremail>
+    <authorurl>http://www.centrora.com</authorurl>
+    <authorurl>http://www.opensource-excellence.com</authorurl>
+	<version>7.1.3</version>
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu img="components/com_ose_firewall/favicon.ico">Centrora Security</menu>
+	 	<files folder="admin">
+		<filename>ose_firewall.php</filename>
+		<folder>assets</folder>
+		<folder>classes</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>includes</folder>
+		<folder>protected</folder>
+		<folder>public</folder>
+		<folder>vendor</folder>
+		</files>
+	</administration>
+</extension>

@@ -1,0 +1,62 @@
+.logo img{
+    width: 300px !important;
+    padding-left: 15px;
+}
+.vendorname {
+    display: none;
+}
+
+#versions {
+    margin-top: 38px;
+}
+
+.centrora-news {
+    margin-top: 23px;
+}
+
+#progressingbar {
+    padding-right: 0;
+}
+
+.wrapbody {
+    background-image: url("imgs/background.jpg");
+}
+
+.everythingOnOneLine {
+    background-image: url("imgs/background.jpg");
+}
+
+#div_dashboard {
+    top: 20px;
+}
+
+#mfiles-results {
+    color: #fff;
+}
+
+#scan-result-panel {
+    color: #fff;
+}
+
+#scan-result-panel .nav-tabs{
+    display: none;
+}
+
+.vl-short-desc {
+    background-color: #fcdfdb;
+    border-color: #fac9c4;
+    color: #e02612;
+}
+
+#dashboard .oem-footer{
+    padding-left: 0 !important;
+}
+
+#dashboard .oem-footer-box{
+    padding-right: 0 !important;
+}
+
+#vsscan-page .oem-footer{
+    margin-top: 0 !important;
+}
+

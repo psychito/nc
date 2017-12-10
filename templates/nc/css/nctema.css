@@ -2,6 +2,21 @@
 .secondcont{
 	padding-top: 90px;
 }
+.wdform-page-and-images{
+	text-align: center;
+}
+#back-top{
+	padding-right:50px;
+}
+.libtit {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: Oswald, sans-serif;
+}
+.quslider{
+	min-height: 170px !important;
+}
 
 .readmore a{
 
@@ -67,8 +82,23 @@
 	width:100%;
 	max-height: 60px;
 }
-.contenido img{
+.contenido img, #cboxContent img{
 	padding: 0 20px 0 0;
+}
+.libro{
+	text-align: center;
+}
+.libro a{
+	color: #57B9D0;
+}
+.libro a:hover{
+	color: #57B9D0;
+	text-decoration: none;
+}
+.libro img {
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
 }
 .logo{
 	height: 100%;
@@ -139,6 +169,18 @@
 	font-family: Oswald, sans-serif;
 	font-size: 11px;
 	text-transform: none;	
+}
+footer{
+	background-color: #53545F;
+padding: 20px 0;
+color: white;
+}
+footer a{
+	color: white;
+}
+footer a:hover{
+	color:white;
+	text-decoration:none;
 }
 .quslider{
 	background-color: #53545F;
@@ -5825,10 +5867,13 @@ a.badge:focus {
 	}
 }
 @media (max-width: 800px) {
-.bt-cs .bt-inner .bt-title{
+	.quslider{
+		min-height: 185px
+	}
+.phslider .bt-cs .bt-inner .bt-title{
 		font-size:19px;
 	}
-	.bt-desc{
+	.phslider .bt-desc{
 		display:none;
 	}
 	.nav {

@@ -1,0 +1,98 @@
+.logo img{
+    width: 300px !important;
+    padding-left: 15px;
+}
+.vendorname {
+    display: none;
+}
+
+#versions {
+    margin-top: 38px;
+}
+
+.centrora-news {
+    margin-top: 23px;
+}
+
+#progressingbar {
+    padding-right: 0;
+}
+
+#div_dashboard {
+    top: 20px;
+}
+
+#mfiles-results {
+    color: #fff;
+}
+
+#scan-result-panel {
+    color: #fff;
+}
+
+#scan-result-panel .nav-tabs{
+    display: none;
+}
+
+.vl-short-desc {
+    background-color: #fcdfdb;
+    border-color: #fac9c4;
+    color: #e02612;
+}
+
+#dashboard .oem-footer{
+    padding-left: 0 !important;
+}
+
+#dashboard .oem-footer-box{
+    padding-right: 0 !important;
+}
+
+#vsscan-page .oem-footer{
+    margin-top: 0 !important;
+}
+
+.navbar .nav > li > a {
+    color: #fff !important;
+     text-shadow: none !important;
+    background: rgba(10,61,86,0.7) !important;
+}
+
+.container.wrapbody {
+    height: 100%;
+}
+
+#oseappcontainer {
+    height: 100%;
+}
+
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+    background-color: rgba(241,148,46,0.7) !important;
+}
+
+.row {
+     margin-left: 0 !important;
+}
+.row-set {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.col-sm-12.footer-innerbox {
+    padding: 0 !important;
+}
+
+.back-to-jm {
+     margin-left: 0 !important;
+    margin-top: 23px !important;
+}
+
+.logo {
+    margin-bottom: 25px;
+}
+
+.call-to-action-txt {
+     margin-left: 0 !important;
+}
+#adminmenu .wp-menu-image img {
+    padding: 2px 0 0;
+}
